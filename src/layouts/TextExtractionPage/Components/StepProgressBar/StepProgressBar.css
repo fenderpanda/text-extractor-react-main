@@ -1,0 +1,72 @@
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsing-final-step {
+    0% {
+        transform: scale(1);
+        color: black;
+        border: 2px solid black;
+        box-shadow: black;
+    }
+    50% {
+        transform: scale(1.25);
+        color: black;
+        border: 2px solid black;
+        box-shadow: black;
+    }
+    100% {
+        transform: scale(1);
+        color: #198754;
+        border: 2px solid #198754;
+        box-shadow: 0 0 6px 2px #28a745;
+    }
+}
+
+@keyframes error-step {
+    0% {
+        transform: scale(1);
+        color: black;
+        border: 2px solid black;
+        box-shadow: black;
+    }
+    50% {
+        transform: scale(1.25);
+        color: black;
+        border: 2px solid black;
+        box-shadow: black;
+    }
+    100% {
+        transform: scale(1);
+        color: #ff0000;
+        border: 2px solid #ff0000;
+        box-shadow: 0 0 6px 2px #ff4000;
+    }
+}
+
+.pulsing {
+    animation: 1500ms pulsing infinite;
+}
+
+.pulsing-final-step {
+    animation: 1500ms pulsing-final-step 1;
+    animation-fill-mode: forwards;
+}
+
+.error-step {
+    animation: 1500ms error-step 1;
+    animation-fill-mode: forwards;
+}
+
+.step-progress-bar {
+    background-color: #28a745;
+    transition: 1500ms;
+}
